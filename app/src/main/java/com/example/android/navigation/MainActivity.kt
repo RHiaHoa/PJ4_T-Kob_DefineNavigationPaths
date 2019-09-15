@@ -37,7 +37,8 @@ class MainActivity : AppCompatActivity() {
         NavigationUI.setupActionBarWithNavController(this, navController, drawerLayout)
     }
     override fun onSupportNavigateUp(): Boolean {
-        
+        val navController = this.findNavController(R.id.myNavHostFragment)
+        return NavigationUI.navigateUp(navController, drawerLayout)
     }
 
     // TODO (01) Create the new TitleFragment
